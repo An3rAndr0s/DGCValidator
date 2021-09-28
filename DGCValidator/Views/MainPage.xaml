@@ -140,12 +140,20 @@
     <ContentPage.Content>
         <StackLayout Spacing="10" BackgroundColor="White">
             <Label Text="{x:Static resource:AppResources.InformationText}" FontSize="16" Padding="30,20,30,10" TextColor="Black"/>
-            <ImageButton Source="scan.png" HeightRequest="80" WidthRequest="80" Command="{Binding ScanCommand}" HorizontalOptions="Center"/>
-            <Label Text="{x:Static resource:AppResources.ScanButtonText}" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ScanCommand}" NumberOfTapsRequired="1" />
-                </Label.GestureRecognizers>
-            </Label>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="scan.png" HeightRequest="80" WidthRequest="80" Command="{Binding ScanCommand}" HorizontalOptions="Center"/>
+                <Label Text="{x:Static resource:AppResources.ScanButtonText}" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ScanCommand}" NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <ImageButton Source="scan.png" HeightRequest="80" WidthRequest="80" Command="{Binding ScanCommand}" HorizontalOptions="Center"/>
+                <Label Text="{x:Static resource:AppResources.ScanButtonText}" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ScanCommand}" NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
             <ScrollView>
                 <StackLayout BackgroundColor="White">
                     <Label x:Name="labelResult" Text="{Binding ResultText}" FontSize="Large" BackgroundColor="White" FontAttributes="Bold" TextColor="{Binding IsResultOK, Converter={StaticResource LabelColorConverter}}" Padding="30,0,30,0"/>

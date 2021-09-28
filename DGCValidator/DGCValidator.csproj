@@ -57,6 +57,8 @@
     <Compile Update="Resources\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Resources\AppResources.nl.Designer.cs">
       <DependentUpon>AppResources.nl.resx</DependentUpon>
